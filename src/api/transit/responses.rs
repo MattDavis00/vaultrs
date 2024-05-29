@@ -34,7 +34,7 @@ pub enum ReadKeyData {
     Asymmetric(HashMap<String, ReadPublicKeyEntry>),
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone, PartialEq)]
 pub struct ReadPublicKeyEntry {
     pub creation_time: DateTime<Utc>,
     pub name: String,
